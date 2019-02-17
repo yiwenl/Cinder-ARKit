@@ -108,6 +108,10 @@ bool SessionImpl::isInterfaceInPortraitOrientation() const
     // Update view matrix
     ciARKitSession->mViewMatrix = toMat4([frame.camera viewMatrixForOrientation:orientation]);
     
+    //  Update Camera position
+    mat4 mtxTransform = toMat4(frame.camera.transform);
+    ciARKitSession->mCameraPosition = vec3(mtxTransform[3]);
+    
     // Update projection matrix
     auto viewBounds = [[UIScreen mainScreen] bounds];
     CGSize viewportSize = viewBounds.size;

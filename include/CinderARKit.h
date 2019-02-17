@@ -74,6 +74,10 @@ public:
     */
     const mat4 getProjectionMatrix() const;
     
+    /**  Get the position of the device camera
+     */
+    const vec3 getCameraPosition() const;
+    
 
     //===== Camera Capture =====================================================//
     /**  Set whether to process the colour image from the camera

@@ -81,6 +81,7 @@ public:
 
     mat4                   mViewMatrix;
     mat4                   mProjectionMatrix;
+    vec3                   mCameraPosition;
     
     float                  mAmbientLightIntensity;
     float                  mAmbientColorTemperature;

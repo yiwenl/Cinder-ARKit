@@ -27,6 +27,7 @@ const std::vector<ImageAnchor>& Session::getImageAnchors() const    { return mSe
 void Session::setRGBCaptureEnabled( bool captureEnabled )           { mSessionImpl.mRGBCaptureEnabled = captureEnabled; }
 const mat4 Session::getViewMatrix() const                           { return mSessionImpl.mViewMatrix; }
 const mat4 Session::getProjectionMatrix() const                     { return mSessionImpl.mProjectionMatrix; }
+const vec3 Session::getCameraPosition() const                       { return mSessionImpl.mCameraPosition; }
 
 std::shared_ptr<Anchor> Session::findAnchorWithID( AnchorID anchorID ) const
 {
